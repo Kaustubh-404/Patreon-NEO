@@ -101,5 +101,5 @@ We welcome contributions from the community! Feel free to fork the repo, open is
 
 
 ### Contract Addresses
-- **Smart Contract**: _[0x8120C0755d2297967e5e15384398DB0213e175d9]_
+- **Smart Contract**: _[0xBEd591DDCca865D0eDF0Aebc1d5712661FD48a84]_
 
