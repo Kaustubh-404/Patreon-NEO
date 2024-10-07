@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-contract Butmecoffee {
+contract Neotron {
     struct Coffee {
         address sender;
         string message;
@@ -11,14 +11,14 @@ contract Butmecoffee {
     uint256 totalNeo;
     address payable owner;
     
-    event NewCoffee (address indexed sender, string message, uint256 timestamp);
+    event NewNeo (address indexed sender, string message, uint256 timestamp);
 
 
     constructor() {
         owner = payable(msg.sender);
     }
 
-    function buymecoffee(
+    function NeotronX(
         string memory _message
     ) payable public{
         require(msg.value > 0, "must be greater than 0");
@@ -26,7 +26,7 @@ contract Butmecoffee {
         totalNeo += 1;
         payable(owner).transfer(msg.value);
 
-        emit NewCoffee(msg.sender,_message, block.timestamp);
+        emit NewNeo(msg.sender,_message, block.timestamp);
 
     }
 
