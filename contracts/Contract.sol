@@ -8,7 +8,7 @@ contract Butmecoffee {
         uint256 timestamp;
     }
     
-    uint256 totalCoffee;
+    uint256 totalNeo;
     address payable owner;
     
     event NewCoffee (address indexed sender, string message, uint256 timestamp);
@@ -23,14 +23,14 @@ contract Butmecoffee {
     ) payable public{
         require(msg.value > 0, "must be greater than 0");
 
-        totalCoffee += 1;
+        totalNeo += 1;
         payable(owner).transfer(msg.value);
 
         emit NewCoffee(msg.sender,_message, block.timestamp);
 
     }
 
-    function getTotalCoffee() public view returns(uint256){
-        return totalCoffee;
+    function gettotalNeo() public view returns(uint256){
+        return totalNeo;
     }
 }
